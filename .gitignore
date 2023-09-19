@@ -1,3 +1,5 @@
 .ipynb_checkpoints
+.vscode
+catboost_info
 datasets
 car-prices-prediction-for-y.ipynb
