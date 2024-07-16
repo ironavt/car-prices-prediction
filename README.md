@@ -1,4 +1,3 @@
-# WORK IN PROGRESS
 # Car prices prediction
 ## Project description
 
@@ -30,3 +29,15 @@ Dataset objects are entries crawled from car profile forms:
 
 Target feature:
 * `Price` — price (euro)
+
+# Conclusion
+* Dataset has a lot of outliers and missing values.
+* * I marked outliers as **NaN** values and removed only objects with 3 or more missing values.
+* * For objects left I changed **NaN**s to **unknown** values in categorical features.
+* All models except dummies showed RMSE score that meets reqirements.
+* Random Forest Regressor showed itself to be the slowest one.
+* Linear Regression was the fastest to fit and to predict. It has the worst RMSE score but it still fits requirements.
+* CatBoost fits much slower than LGBM but makes predictions faster.
+* LGBM fit time is the second after Linear Regression
+
+LightGBM model was chosen with **RMSE** score of **1429**
